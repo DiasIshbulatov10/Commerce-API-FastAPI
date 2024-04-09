@@ -1,0 +1,14 @@
+[Unit]
+Description=My Python Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/ec2-user/fluffie-api-master/scripts/entrypoint.sh
+WorkingDirectory=/home/ec2-user/fluffie-api-master
+Restart=on-failure
+User=ec2-user
+
+[Install]
+WantedBy=multi-user.target
+

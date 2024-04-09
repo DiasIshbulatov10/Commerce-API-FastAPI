@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "products-fastapi"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.94.1"
+uvicorn = "^0.27.1"
+pydantic = "^1.10.6"
+ujson = "^5.7.0"
+beanie = "^1.25.0"
+motor = "^3.1.1"
+python-dotenv = "^1.0.0"
+elasticsearch = "^8.7.0"
+numpy = "^1.24.2"
+pinecone-client = {extras = ["grpc"], version = "^2.2.1"}
+openai = "^0.27.4"
+tenacity = "^8.2.2"
+redis = "^4.5.4"
+fuzzywuzzy = "^0.18.0"
+python-levenshtein = "^0.21.0"
+langchain = "^0.0.300"
+scipy = "^1.11.2"
+gptcache = "^0.1.42"
+chromadb = "^0.3.26"
+torch = "^2.2.1"
+celery = {extras = ["redis"], version = "^5.2.7"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "my_package.main:start"

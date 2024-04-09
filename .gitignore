@@ -1,0 +1,12 @@
+.vscode/settings.json
+
+
+.venv
+/venv
+test-postgre
+__pycache__
+*.py[do]
+
+*.env
+
+js/

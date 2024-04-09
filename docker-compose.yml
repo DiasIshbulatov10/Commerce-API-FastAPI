@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  cache:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    # command: ["uvicorn", "fluffie_app.__main__:app", "--env-file", ".env", "--host", "0.0.0.0", "--reload"]
+    volumes:
+      - ./fluffie_app:/app/fluffie_app
+    depends_on:
+      - cache
+    environment:
+      - WATCHFILES_FORCE_POLLING=true
